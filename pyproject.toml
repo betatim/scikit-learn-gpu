@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "scikit-learn-gpu"
+version = "0.0.1"
+authors = [
+  { name="Tim Head", email="betatim@gmail.com" },
+]
+description = "A GPU accelerated backend for scikit-learn"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "scikit-learn"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+
+[project.entry-points.sklearn_engines]
+kmeans = "sklearn_gpu.kmeans:KMeansEngine"
